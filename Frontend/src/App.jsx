@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import About from "./pages/About";
-import RegistrationForm from "./pages/signup";
+import RegistrationForm from "./pages/Signup";
 import LoginForm from "./pages/Signin";
 import  {AuthProvider} from "./context/AuthContext";
 import BlogApp from "./pages/AddBlog";
