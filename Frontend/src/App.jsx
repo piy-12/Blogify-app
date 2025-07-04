@@ -6,7 +6,7 @@ import LoginForm from "./pages/Signin";
 import  {AuthProvider} from "./context/AuthContext";
 import BlogApp from "./pages/AddBlog";
 import Home from "./pages/Home";
-import View from "./pages/view";
+import View from "./pages/View";
 import MyBlogs from "./pages/MyBlogs";
 
 function App() {
