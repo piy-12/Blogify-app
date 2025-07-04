@@ -1,8 +1,8 @@
 const {Router} = require("express");
 const multer = require("multer")
 const path = require("path")
-const Blog = require("../models/Blog")
-const Comment = require("../models/Comment")
+const Blog = require("../models/blog")
+const Comment = require("../models/comment")
 const {checkForAuthentication} = require("../middleware/auth")
 const mongoose = require("mongoose");
 
