@@ -15,6 +15,8 @@ function Home() {
            Authorization: `Bearer ${token}`,
           }
         });
+      console.log("API URL:", import.meta.env.VITE_API_URL);
+
         console.log(res.data);
         setBlogs(res.data.blogs);
 

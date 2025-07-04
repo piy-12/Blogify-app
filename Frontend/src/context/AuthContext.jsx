@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
   try {
     const token = sessionStorage.getItem("token");
 
-    const res = await axios.delete(`${import.meta.env.VITE_API_URL}/api/user/${userId}`, {
+    const res = await axios.delete(`http://localhost:8000/api/user/${userId}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
