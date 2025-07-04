@@ -30,7 +30,7 @@ const handleSubmit = async(e) => {
     
     try {
          const token = sessionStorage.getItem("token")
-         await axios.post('http://localhost:8000/blog', formData, {
+         await axios.post(`${import.meta.env.VITE_API_URL}/blog`, formData, {
           headers: {
            Authorization: `Bearer ${token}`,
           }

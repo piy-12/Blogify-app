@@ -85,7 +85,7 @@ const handleSubmit = async (e) => {
 
   
   <img
-    src={`http://localhost:8000${blog.coverImageURL}`}
+    src={`${import.meta.env.VITE_API_URL}${blog.coverImageURL}`}
     alt="Blog Cover"
     className="w-full h-auto max-h-[400px] object-cover rounded-md mb-6"
   />
@@ -101,7 +101,7 @@ const handleSubmit = async (e) => {
     <img
       src={
         blog.createdBy?.profileImageURL
-          ? `http://localhost:8000${blog.createdBy.profileImageURL}`
+          ? `${import.meta.env.VITE_API_URL}${blog.createdBy.profileImageURL}`
           : "https://ui-avatars.com/api/?name=Deleted+User"
       }
       alt="Author"
@@ -147,7 +147,7 @@ const handleSubmit = async (e) => {
     <img
       src={
         comm.createdBy?.profileImageURL
-          ? `http://localhost:8000${comm.createdBy.profileImageURL}`
+          ?`${import.meta.env.VITE_API_URL}${comm.createdBy.profileImageURL}`
           : "https://ui-avatars.com/api/?name=Deleted+User"
       }
       alt="User"

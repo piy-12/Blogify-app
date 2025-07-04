@@ -9,7 +9,7 @@ function BlogCard({ _id, title, Body, coverImageURL }) {
       {/* Image */}
       {coverImageURL && (
         <img
-          src={`http://localhost:8000${coverImageURL}`} // adjust if full URL
+          src={`${import.meta.env.VITE_API_URL}${coverImageURL}`} // adjust if full URL
           alt="Blog Cover"
           className="w-full h-60 object-cover"
         />
