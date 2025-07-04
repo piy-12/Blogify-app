@@ -10,7 +10,7 @@ function Home() {
     const fetchBlogs = async () => {
       try {
         const token = sessionStorage.getItem("token")
-        const res = await axios.get("http://localhost:8000/blog",{
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/blog`,{
           headers: {
            Authorization: `Bearer ${token}`,
           }
