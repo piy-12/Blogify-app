@@ -1,7 +1,7 @@
 const {Schema,model} = require('mongoose');
 const mongoose = require("mongoose");
-require('./Comment');
-require('./Blog');
+require('./comment');
+require('./blog');
 
 
 const userSchema = new Schema({
