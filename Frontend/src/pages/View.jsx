@@ -16,7 +16,7 @@ const handleSubmit = async (e) => {
 
     try {
       const token = sessionStorage.getItem("token");
-      await axios.post(`http://localhost:8000/blog/comm/${id}`, {
+      await axios.post(`${import.meta.env.VITE_API_URL}/blog/comm/${id}`, {
         content: newComment
       }, {
         headers: {
@@ -36,7 +36,7 @@ const handleSubmit = async (e) => {
   const fetchBlog = async () => {
     try {
       
-      const res = await axios.get(`http://localhost:8000/blog/${id}`, {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/blog/${id}`, {
        
       });
       setBlog(res.data.blog);
@@ -49,7 +49,7 @@ const handleSubmit = async (e) => {
   const fetchComments = async ()=> {
     try{
       
-      const res = await axios.get(`http://localhost:8000/blog/${id}`)
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/blog/${id}`)
       
      
       setComment(res.data.comments);

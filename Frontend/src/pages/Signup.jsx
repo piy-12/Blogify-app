@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import {useAuth} from '../context/AuthContext'
 
-const RegistrationForm =  () => {
+const Signup =  () => {
   const navigate = useNavigate();
   const {signIn}= useAuth();
   const [formData, setFormData] = useState({
@@ -22,7 +22,7 @@ const RegistrationForm =  () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
      try {
-      const response = await fetch("http://localhost:8000/api/signup", { 
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/signup`, { 
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -98,4 +98,4 @@ const RegistrationForm =  () => {
   );
 };
 
-export default RegistrationForm;
+export default Signup;
