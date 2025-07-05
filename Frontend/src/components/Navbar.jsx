@@ -59,7 +59,7 @@ const Navbar = () => {
   <li>
     <button
       onClick={() => {
-        deleteUser(user._id);
+        deleteUser(render.user._id);
         signOut();
         setDropdownOpen(false);
       }}
