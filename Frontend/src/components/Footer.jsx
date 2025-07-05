@@ -32,7 +32,7 @@ const Footer = () => {
             <a href="https://github.com/piy-12" target="_blank" rel="noopener noreferrer" className="hover:text-white">
               <FaGithub size={24} />
             </a>
-            <a href="www.linkedin.com/in/piyush-ahuja-18a17826b" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+            <a href="https://linkedin.com/in/piyush-ahuja-18a17826b" target="_blank" rel="noopener noreferrer" className="hover:text-white">
               <FaLinkedin size={24} />
             </a>
             <a href="https://www.instagram.com/piyush.ah1" target="_blank" rel="noopener noreferrer" className="hover:text-white">
