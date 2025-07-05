@@ -43,9 +43,7 @@ const Footer = () => {
       </div>
 
       
-      <div className="mt-8 text-center text-gray-500 text-sm border-t border-gray-700 pt-4">
-        &copy; {new Date().getFullYear()} Your Blog Name. All rights reserved.
-      </div>
+      
     </footer>
   );
 };
