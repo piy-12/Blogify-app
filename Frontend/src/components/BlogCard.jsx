@@ -6,10 +6,10 @@ function BlogCard({ _id, title, Body, coverImageURL }) {
 
   return (
     <div className="m-15 bg-white shadow-lg border-b-black  ">
-      {/* Image */}
+      
       {coverImageURL && (
         <img
-          src={`${import.meta.env.VITE_API_URL}${coverImageURL}`} // adjust if full URL
+          src={`${import.meta.env.VITE_API_URL}${coverImageURL}`} 
           alt="Blog Cover"
           className="w-full h-60 object-cover"
         />

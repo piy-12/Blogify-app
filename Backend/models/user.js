@@ -22,11 +22,7 @@ const userSchema = new Schema({
         type: String,
         default: '/images/images.png',
     },
-    role: {
-        type: String,
-        enum: ["USER", "ADMIN"],
-        default: "USER",
-    },
+    
 
 }, {timestamps: true});
 

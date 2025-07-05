@@ -23,6 +23,26 @@ router.get("/myBlogs", checkForAuthentication(), async (req, res) => {
 });
 
 
+router.put("/:id", checkForAuthentication(), async(req,res) => {
+  try{
+const blog = await Blog.findById(req.params.id); 
+  if(!blog) return res.status(400).json({message: "Error finding the blog"});
+
+  if(blog.createdBy.toString() !== req.user._id)
+    return res.status(404).json({message: "You cannot update other's blogs"});
+
+  const updatedBlog = await Blog.findByIdAndUpdate(req.params.id,
+     {
+    $set: req.body
+  }, {new: true});
+  res.status(200).json(updatedBlog);
+  }catch(err){
+    console.log("Error Updating Blogs", err)
+  }
+})
+
+
+
 router.get("/:id", async (req, res) => {
   try {
     const blog = await Blog.findById(req.params.id).populate("createdBy");
